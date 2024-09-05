@@ -1,7 +1,10 @@
+const dotenv = require('dotenv');
+dotenv.config();
 const mongoose = require("mongoose");
 const { string } = require("zod");
 
-mongoose.connect("mongodb+srv://shreyajkanade007:Bijapur%40586101@cluster0.1qy9ml6.mongodb.net/auth");
+
+mongoose.connect(process.env.URI);
 
 const signupSchema= mongoose.Schema({
     firstname: String,
